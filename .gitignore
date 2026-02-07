@@ -1,1 +1,8 @@
+# C/C++ compiled outputs
+*.o
 *.out
+*.exe
+*.a
+*.so
+*.dylib
+
