@@ -378,80 +378,27 @@ void increment(char *string, int n) {
 // --> Above solution, in for-loop, string[i] is exactly same as *(string + i).
 // Let's try to give more example here.
 
-// #include<stdio.h>
+#include<stdio.h>
 
-// int main() {
+int main() {
     
-//     char arr[] = "abc";
+    char arr[] = "abc";
 
-//     char *p = arr;
+    char *p = arr;
 
-//     // Print first letter "c", we have three different way to print it:
+    // Print first letter "c", we have three different way to print it:
 
-//     // 1st: Easy way to print it out.
-//     printf("1st: %c\n", arr[2]);
+    // 1st: Easy way to print it out.
+    printf("1st: %c\n", arr[2]);
     
-//     // 2nd: Using the pointer to print first letter
-//     printf("2nd: %c\n", *(p + 2));
+    // 2nd: Using the pointer to print first letter
+    printf("2nd: %c\n", *(p + 2));
 
-//     // 3rd: or, we could write like this:
-//     printf("3rd: %c\n", p[2]);
-
-
-//     return 0;
-// }
+    // 3rd: or, we could write like this:
+    printf("3rd: %c\n", p[2]);
 
 
-/*
-
-(c) Overwrites an input string src with “61C is awesome!” if there’s room. Does nothing if there is not. Assume that length correctly represents the length of src.
-
---> The only problem is the second line. It should be "char *replaceptr".
-
-*/
-
-void cs61c(char *src, size_t length) {
-    // 
-    char *srcptr, *replaceptr;
-    char replacement[16] = "61C is awesome!";
-    srcptr = src;
-    replaceptr = replacement;
-    if (length >= 16) {
-    for (int i = 0; i < 16; i++)
-    *srcptr++ = *replaceptr++;
-    }
+    return 0;
 }
 
-//================================================================================================================================================================================
 
-
-/*
-Implement the following functions so that they work as described.
-*/
-
-/*
-(a) Swap the value of two ints. Remain swapped after returning from this function.
-Hint: Our answer is around three lines long.
-*/
-
-void swap(int *a, int *b){
-    int tmp = *a;
-    *a = *b;
-    *b = tmp;
-}
-
-/*
-(b) Return the number of bytes in a string. Do not use strlen.
-Hint: Our answer is around 5 lines long.
-*/
-
-int mystrlen(char *str){
-    int count = 0;
-    while(*str != 0){
-        str++;
-        count++;
-    }
-    return count;
-}
-
-//================================================================================================================================================================================
